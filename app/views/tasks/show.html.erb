@@ -1,0 +1,17 @@
+<h1><%= @task.title %></h1>
+
+<p><%= @task.details %></p>
+
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+<% end %>
+
+<br>
+
+<%= link_to "Edit", edit_path %><br><br>
+
+<%= link_to "Delete task",  task_path, method: :delete %> <br><br>
+
+<%= link_to "Go back to tasks", tasks_path(@tasks) %>
